@@ -1,0 +1,21 @@
+[package]
+name = "client"
+version = "0.1.0"
+authors = ["Marciano da Rocha <nanocfw@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+[dependencies]
+# gRPC server/client
+tonic = "0.4"
+prost = "0.7"
+# CLI
+structopt = "0.3"
+# Async runtime
+tokio = { version = "1.5", features = ["full"] }
+derive-macro = { path = "derive-macro" }
+
+[build-dependencies]
+# protobuf->Rust compiler
+tonic-build = "0.4"
